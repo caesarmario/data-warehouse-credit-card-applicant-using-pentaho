@@ -12,3 +12,11 @@
 <br>
 
 # SOON 😁
+
+## 🙌 Support me!
+
+👉 If you find this project useful, **please ⭐ this repository 😆**!
+
+---
+
+👉 _More about myself: <a href="https://linktr.ee/caesarmario_"> here </a>_
