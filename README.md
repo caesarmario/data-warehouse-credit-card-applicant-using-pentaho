@@ -1,5 +1,5 @@
 <h1 align="center"> 💳 ETL Credit Card Data Set 💳 </h1>
-<p align="center">using <b>Pentaho Data Integration (PDI) ⚙</b></p><br>
+<p align="center">using <b>Pentaho Data Integration (PDI)/Kettle ⚙</b></p><br>
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99" alt="Star Badge"/>
   <a href="https://www.github.com/caesarmario">
