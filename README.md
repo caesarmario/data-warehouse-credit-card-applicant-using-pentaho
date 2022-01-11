@@ -1,5 +1,7 @@
 <h1 align="center"> 💳 ETL Credit Card Data Set 💳 </h1>
-<p align="center">using <b>Pentaho Data Integration (PDI)/Kettle ⚙</b></p><br>
+<p align="center">using <b>Pentaho Data Integration (PDI)/Kettle ⚙</b><br><br>
+.: 📄 Dataset taken from <b><a href="https://www.kaggle.com/rikdifos/credit-card-approval-prediction"> Kaggle </a></b> :.
+</p><br>
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99" alt="Star Badge"/>
   <a href="https://www.github.com/caesarmario">
@@ -11,7 +13,30 @@
 </p>
 <br>
 
-# SOON 😁
+
+## 📃 Table of Contents:
+  - [About Project](#-about-project)
+  - [Objectives](#-objectives)
+  - [Data Set Description](#-data-set-description)
+<br>
+
+## 🖋 About Project
+*   This repository contains ETL using Pentaho Data Integration (PDI) for credit card datasets provided by <a href="https://www.kaggle.com/rikdifos/credit-card-approval-prediction"><b>Seanny (rikdifos)</b></a>. <br>
+*   This project will also create:
+    - **2 dimension tables** (Applicant_Dimension and CreditRecord_Dimension), 
+    - **Time dimension** (Time_Dimension), and 
+    - **1 fact table** (CreditCard_Fact).
+<br><br>
+
+## 📌 Objectives
+*   Perform ETL using PDI for both datasets
+*   Create time dimension using PDI
+*   Create fact table using PDI
+<br><br>
+
+## 🧾 Data Set Description
+*   The dataset description can be seen <a href="https://www.kaggle.com/rikdifos/credit-card-approval-prediction/discussion/119320"><b>here</b></a>.
+<br><br>
 
 ## 🙌 Support me!
 
