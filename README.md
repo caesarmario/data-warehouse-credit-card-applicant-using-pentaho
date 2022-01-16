@@ -163,32 +163,51 @@ pass: 		qwer
 
 ### 💳 Credit Card Fact
 ![Credit Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact.png)<br>
-#### ▶ Generate Rows Configuration
-![Generate Rows - Time](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/Time_Dimension/1%20-%20Generate%20Rows.png)
-   - Generate a column with specific date (January 1, 2016). <br>
-#### ▶ Add Sequence Configuration
-![Add Sequence - Time](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/Time_Dimension/2%20-%20Add%20Sequence.png)
-   - Add row with sequence from 1 to 99999. <br>
+#### ▶ Table Input (Credit Record) Configuration
+![Table Input CR - Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact/1%20-%20Table%20Input%20(CreditRecord%20Dimension).png)
+   - Importing Credit Record dimension from OLAP. <br>
+#### ▶ Table Input (Application) Configuration
+![Table Input Application - Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact/2%20-%20Table%20Input%20(Application%20Dimension).png)
+   - Importing Application dimension from OLAP. <br>
+#### ▶ Stream Lookup 1 Configuration
+![Stream Lookup 1 - Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact/3%20-%20Stream%20Lookup%201.png)
+   - Join both dimension tables based on applicant ID. <br>
+#### ▶ Filter Rows Configuration
+![Filter Rows - Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact/4%20-%20Filter%20Rows.png)
+   - Filter applicant ID that doesn't exists in both tables. <br>
+#### ▶ Table Input (Time) Configuration
+![Table Input Time - Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact/5%20-%20Table%20Input%20(Time%20Dimension).png)
+   - Importing Time dimension from OLAP. <br>
+#### ▶ Stream Lookup 2 Configuration
+![Stream Lookup 2 - Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact/6%20-%20Stream%20Lookup%202.png)
+   - Join application & credit record dimension with time dimension. <br>
+#### ▶ Replace in String 1 Configuration
+![Replace in String 1 - Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact/7%20-%20Replace%20in%20String%201.png)
+   - Replace C, X, 0 with 'Good Debt' (C: loan for that month is already paid; X: no loan for that month; 0: loan is 1 to 29 days overdue). 
+   - Replace 1, 2, 3, 4, 5 with 'Bad Debt' (1: loan is 30 to 59 days overdue; 2: loan is 60 to 89 days overdue; 3: loan is 90 to 119 days overdue; 4: loan is 120 to 149 days overdue; 5: loan is more than 150 days overdue)<br>
 #### ▶ Calculator Configuration
-![Calculator - Time](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/Time_Dimension/3%20-%20Calculator.png)
-   - Caluclating start date with sequence data to make next date (ex: January 2, 2016; January 3, 2016)
-   - Creating new columns (Day, Months, and Year). <br>
-#### ▶ Data Grid Configuration
-![Data Grid - Time_1](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/Time_Dimension/4%20-%20Data%20Grid.png)<br>
-![Data Grid - Time_2](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/Time_Dimension/4%20-%20Data%20Grid_2.png)
-   - Creating . <br>
-#### ▶ Stream Lookup Configuration
-![Stream Lookup - Time](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/Time_Dimension/5%20-%20Stream%20Lookup.png)
-   - Combine 'Month' from Calculator node to 'No_Month' from Data Grid node. <br>
-#### ▶ Modified JavaScript Value Configuration
-![Modified JavaScript - Time](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/Time_Dimension/6%20-%20Modified%20JavaScript.png)
-   - Creating time ID using JavaScript code. <br>
+![Calculator - Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact/8%20-%20Calculator.png)
+   - Creating 2 copies from 'Status' column ('Good_Debt' and 'Bad_Debt').
+#### ▶ Replace in String Configuration
+![Replace in String - Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact/9%20-%20Replace%20in%20String%202.pngg)
+   - Good_Debt: Good Debt will be change to 1, while Bad Debt will be change to 0
+   - Bad_Debt: Good Debt will be change to 0, while Bad Debt will be change to 1
+#### ▶ Get System Info Configuration
+![Get System Info - Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact/10%20-%20Get%20System%20Info.png)
+   - To create date & time when ETL was performed. <br>
 #### ▶ Select Values Configuration
-![Select Values - Time](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/Time_Dimension/7%20-%20Select%20Values.png)
+![Select Values - Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact/11%20-%20Select%20Values.png)
    - Select columns that will entered OLAP. <br>
 #### ▶ Table Output Configuration
-![Table Output - Time](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/Time_Dimension/8%20-%20Table%20Output.png)
-   - Exporting time dimension to OLAP. <br>
+![Table Output - Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact/12%20-%20Table%20Output.png)
+   - Exporting fact table to OLAP. <br>
+
+[![](https://img.shields.io/badge/back%20to%20top-%E2%86%A9-blue)](#-table-of-contents)
+<br><br>
+
+## ⭐ Star Schema
+*   Star schema generated using Power BI
+![Star Schema](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/Star_Schema_PBI.PNG)<br>
 
 [![](https://img.shields.io/badge/back%20to%20top-%E2%86%A9-blue)](#-table-of-contents)
 <br><br>
