@@ -18,6 +18,15 @@
   - [About Project](#-about-project)
   - [Objectives](#-objectives)
   - [Data Set Description](#-data-set-description)
+  - [Connection Configuration](#-connection-configuration)
+      - [OLTP](#-oltp-configuration)
+      - [OLAP](#-olap-configuration)
+  - [ETL Process](#-etl-process)
+      - [Application Record](#-application-record)
+      - [Credit Record](#-credit-record)
+      - [Time Dimension](#-time-dimension)
+      - [Credit Card Fact](#-credit-card-fact)
+  - [Star Schema](#-star-schema)
 <br>
 
 ## 🖋 About Project
@@ -189,7 +198,7 @@ pass: 		qwer
 ![Calculator - Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact/8%20-%20Calculator.png)
    - Creating 2 copies from 'Status' column ('Good_Debt' and 'Bad_Debt').
 #### ▶ Replace in String Configuration
-![Replace in String - Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact/9%20-%20Replace%20in%20String%202.pngg)
+![Replace in String - Fact](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/CreditCard_Fact/9%20-%20Replace%20in%20String%202.png)
    - Good_Debt: Good Debt will be change to 1, while Bad Debt will be change to 0
    - Bad_Debt: Good Debt will be change to 0, while Bad Debt will be change to 1
 #### ▶ Get System Info Configuration
