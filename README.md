@@ -152,7 +152,7 @@ pass: 		qwer
 #### ▶ Data Grid Configuration
 ![Data Grid - Time_1](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/Time_Dimension/4%20-%20Data%20Grid.png)<br>
 ![Data Grid - Time_2](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/Time_Dimension/4%20-%20Data%20Grid_2.png)
-   - Creating . <br>
+   - Creating month number and month name. <br>
 #### ▶ Stream Lookup Configuration
 ![Stream Lookup - Time](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/Time_Dimension/5%20-%20Stream%20Lookup.png)
    - Combine 'Month' from Calculator node to 'No_Month' from Data Grid node. <br>
