@@ -1,5 +1,5 @@
-<h1 align="center"> 💳 ETL Credit Card Data Set 💳 </h1>
-<p align="center">using <b>Pentaho Data Integration (PDI)/Kettle ⚙</b><br><br>
+<h1 align="center"> 💳 Data Warehouse Credit Card Applicant 💳 </h1>
+<p align="center">using <b>Pentaho Data Integration (PDI)/Kettle and Microsoft SQL Server 18 ⚙</b><br><br>
 .: 📄 Dataset taken from <b><a href="https://www.kaggle.com/rikdifos/credit-card-approval-prediction"> Kaggle </a></b> :.
 </p><br>
 <p align="center">
@@ -30,20 +30,20 @@
 <br>
 
 ## 🖋 About Project
-*   This repository contains:
+*   This repository contains files to create data warehouse such as:
     - ETL files using Pentaho Data Integration (PDI)
     - Codes to create OLAP (SQL)
     - Codes to select data from OLTP (SQL)
     - Codes to perform random testing (SQL)
 
-    for credit card datasets provided by <a href="https://www.kaggle.com/rikdifos/credit-card-approval-prediction"><b>Seanny (rikdifos)</b></a>.<br>
+    for credit card applicant. The dataset is provided by <a href="https://www.kaggle.com/rikdifos/credit-card-approval-prediction"><b>Seanny (rikdifos)</b></a>.<br>
 
 *   This project will also create:
     - **2 dimension tables** (Applicant_Dimension and CreditRecord_Dimension), 
     - **Time dimension** (Time_Dimension), and 
     - **1 fact table** (CreditCard_Fact).
 
-    using PDI.
+    using PDI and Microsoft SQL Server 18.
 <br><br>
 
 ## 📌 Objectives
