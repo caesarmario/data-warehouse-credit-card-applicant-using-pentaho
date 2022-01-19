@@ -27,6 +27,7 @@
       - [Time Dimension](#-time-dimension)
       - [Credit Card Fact](#-credit-card-fact)
   - [Star Schema](#-star-schema)
+  - [Before & After ETL Comparison](#-be
 <br>
 
 ## 🖋 About Project
@@ -217,6 +218,24 @@ pass: 		qwer
 ## ⭐ Star Schema
 *   Star schema generated using Power BI
 ![Star Schema](https://github.com/caesarmario/ETL-credit-card-dataset-using-pentaho/blob/main/Screenshots/Star_Schema_PBI.PNG)<br>
+
+[![](https://img.shields.io/badge/back%20to%20top-%E2%86%A9-blue)](#-table-of-contents)
+<br><br>
+
+## 👀 Before & After ETL Comparison
+*   This section will show the data structure before & after ETL.
+### 👨‍💼 Application Record
+![Applicant_1](https://github.com/caesarmario/data-warehouse-credit-card-applicant-using-pentaho/blob/main/Screenshots/Before%20%26%20After/Applicant_1.png)<br>
+![Applicant_2](https://github.com/caesarmario/data-warehouse-credit-card-applicant-using-pentaho/blob/main/Screenshots/Before%20%26%20After/Applicant_2.png)<br>
+
+### 💶 Credit Record
+![Credit Record](https://github.com/caesarmario/data-warehouse-credit-card-applicant-using-pentaho/blob/main/Screenshots/Before%20%26%20After/Credit%20Record.png)<br>
+
+### ⌚ Time Dimension
+![Time Dimension](https://github.com/caesarmario/data-warehouse-credit-card-applicant-using-pentaho/blob/main/Screenshots/Before%20%26%20After/Time%20Dimension.png)<br>
+
+### 💳 Credit Card Fact
+![Credit Card Fact](https://github.com/caesarmario/data-warehouse-credit-card-applicant-using-pentaho/blob/main/Screenshots/Before%20%26%20After/Credit%20Card%20Fact.png)<br>
 
 [![](https://img.shields.io/badge/back%20to%20top-%E2%86%A9-blue)](#-table-of-contents)
 <br><br>
