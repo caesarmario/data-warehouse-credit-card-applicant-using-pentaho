@@ -27,7 +27,11 @@
       - [Time Dimension](#-time-dimension)
       - [Credit Card Fact](#-credit-card-fact)
   - [Star Schema](#-star-schema)
-  - [Before & After ETL Comparison](#-be
+  - [Before & After ETL Comparison](#-before--after-etl-comparison)
+      - [Application Record](#-application-record-1)
+      - [Credit Record](#-credit-record-1)
+      - [Time Dimension](#-time-dimension-1)
+      - [Credit Card Fact](#-credit-card-fact-1)
 <br>
 
 ## 🖋 About Project
